@@ -3,34 +3,25 @@
     <title>Jin Liu</title>
     <link rel="shorticon icon" href="/favicon.ico">
     <style>
-      html {
+      body {
         height: 100%;
         width: 100%;
         font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 30px;
         color: #666;
-      }
-
-      body {
-        height: 100%;
-        width: 100%;
-        position: relative;
-      }
-
-      .container {
-        position: relative;
-        padding: 0 2rem;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-        width: 60%;
-        margin: 0 auto;
-        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
       }
 
       .logo {
-        display: block;
-        margin: 0 auto;
         width: 500px;
         height: 100%;
         background: url(logo.svg) no-repeat center center;
@@ -48,9 +39,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <a class="logo" href="http://liujin.me/blog"></a>
-    </div>
+    <a class="logo" href="http://liujin.me/blog"></a>
     <a class="top-right" href="http://liujin.logdown.com">> 老博客</a>
   </body>
 </html>
