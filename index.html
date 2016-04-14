@@ -4,6 +4,8 @@
     <link rel="shorticon icon" href="/favicon.ico">
     <style>
       body {
+        background-image: url(bg.png);
+        background-image: radial-gradient(#fff 0%, rgba(255, 255, 255, 0) 80%), url(bg.png);
         height: 100%;
         width: 100%;
         font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -11,35 +13,80 @@
         color: #666;
         margin: 0;
         padding: 0;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        align-items: center;
-        -webkit-align-items: center;
-        justify-content: center;
-        -webkit-justify-content: center;
       }
 
-      .logo {
-        width: 500px;
-        height: 100%;
-        background: url(logo.svg) no-repeat center center;
+      #particle-slider {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 150px;
+        overflow: hidden;
       }
 
       .top-right {
         position: fixed;
         top: 50px;
         right: 50px;
-        color: #bbb;
+        border: 1px solid #b6a18a;
+        padding: 5px 15px;
         font-size: 15px;
+      }
+
+      footer {
+        background-color: #fff;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        font-size: 13px;
+        line-height: 1.8;
+        padding: 10px 50px;
+        box-shadow: 0 -6px 40px rgba(0, 0, 0, .1);
+      }
+
+      h1 {
+        position: absolute;
+        top: -60px;
+        font-size: 15px;
+        color: #151515;
+      }
+
+      a {
+        color: #b6a18a;
         text-decoration: none;
       }
 
+      a:hover {
+        background-color: #b6a18a;
+        color: #fff;
+      }
     </style>
   </head>
   <body>
-    <a class="logo" href="http://liujin.me/blog"></a>
-    <a class="top-right" href="http://liujin.logdown.com">> 老博客</a>
+    <div id="particle-slider">
+      <div class="slides">
+          <div id="first-slide" class="slide" data-src="logo.png"></div>
+          <div id="second-slide" class="slide" data-src="liujin.png"></div>
+      </div>
+      <canvas class="draw"></canvas>
+    </div>
+    <footer>
+      <h1>A Full Stack Developer / Designer / CG Lover</h1>
+      <p>
+        Hi, I’m Jin. <br/>
+        Living and working in Shenzhen, China. <br/>
+        Feel free to contact me via
+        <a href="mailto:coolziljin@gmail.com">coolziljin@gmail.com</a>.
+      </p>
+      <p>
+        © 2016 liujin.me.
+        <a href="http://liujin.logdown.com">老博客</a>
+      </p>
+    </footer>
+    <a class="top-right" href="http://liujin.me/blog">博客</a>
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./particlify.js" type="text/javascript"></script>
   </body>
 </html>
